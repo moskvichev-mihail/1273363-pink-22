@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Михаил Москвичев](https://up.htmlacademy.ru/adaptive/22/user/1273363).
-* Наставник: [Оксана Сергеева] (https://htmlacademy.ru/profile/oksana).
+* Наставник: [Оксана Сергеева](https://htmlacademy.ru/profile/oksana).
 
 ---
 
