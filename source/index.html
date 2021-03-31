@@ -3,10 +3,176 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
-
+    <header class="header">
+      <nav class="header__nav">
+        <div class="header__logo">
+          <a class="header__logo-link" href="#"></a>
+        </div>
+        <button type="button" class="header__toggle-btn" aria-label="Открыть или закрыть мобильное меню"></button>
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Главная</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Фотографии</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Конкурс</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Пинк</h1>
+      <section class="promo">
+        <h2 class="promo__title">Взгляните на жизнь иначе!</h2>
+        <a href="https://www.apple.com/ru/app-store/" target="_blank" class="promo__link-download">Скачать приложение</a>
+        <ul class="promo__apps-list">
+          <li class="promo__apps-item">
+            <a href="https://www.apple.com/ru/app-store/" target="_blank" class="promo__apps-item-link"></a>
+          </li>
+          <li class="promo__apps-item">
+            <a href="https://play.google.com/store/apps" target="_blank" class="promo__apps-item-link"></a>
+          </li>
+          <li class="promo__apps-item">
+            <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" target="_blank" class="promo__apps-item-link"></a>
+          </li>
+        </ul>
+        <p class="promo__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </section>
+      <section class="advantages">
+        <h2 class="advantages__title">Устали от серости мегаполиса?</h2>
+        <h2 class="advantages__title">Нам есть, что вам предложить!</h2>
+        <ul class="advantages__list">
+          <li class="advantages__list-item">
+            <h3 class="advantages__list-item-title">Поднимает настроение</h3>
+            <p class="advantages__list-item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </li>
+          <li class="advantages__list-item">
+            <h3 class="advantages__list-item-title">Меняет мир вокруг</h3>
+            <p class="advantages__list-item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="advantages__list-item">
+            <h3 class="advantages__list-item-title">Заводит новых друзей</h3>
+            <p class="advantages__list-item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+      </section>
+      <section class="reviews">
+        <ul class="reviews__list">
+          <li class="reviews__list-item">
+            <h3 class="reviews__list-item-title">Николай Петров</h3>
+            <p class="reviews__list-item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </li>
+        </ul>
+        <div class="controls">
+          <button type="button" class="controls__btn controls__btn_active"></button>
+          <button type="button" class="controls__btn"></button>
+          <button type="button" class="controls__btn"></button>
+        </div>
+      </section>
+      <section class="price-apps">
+        <ul class="price-apps__list">
+          <li class="price-apps__list-item">
+            <h3 class="price-apps__title">База
+              <span class="price-apps__title-price">1,99 USD</span>
+            </h3>
+            <ul class="price-apps__advantages-list">
+              <li class="price-apps__advantages-list-item">
+                Розовый фильтр
+              </li>
+              <li class="price-apps__advantages-list-item">
+                Смайлики
+              </li>
+              <li class="price-apps__advantages-list-item">
+                Комментарии
+              </li>
+            </ul>
+          </li>
+          <li class="price-apps__list-item price-apps__list-item_active">
+            <h3 class="price-apps__title">Стандарт
+              <span class="price-apps__title-price">3,99 USD</span>
+            </h3>
+            <ul class="price-apps__advantages-list">
+              <li class="price-apps__advantages-list-item">
+                Розовый фильтр
+              </li>
+              <li class="price-apps__advantages-list-item">
+                Смайлики
+              </li>
+              <li class="price-apps__advantages-list-item">
+                Комментарии
+              </li>
+            </ul>
+          </li>
+          <li class="price-apps__list-item">
+            <h3 class="price-apps__title">Анлим
+              <span class="price-apps__title-price">9,99 USD</span>
+            </h3>
+            <ul class="price-apps__advantages-list">
+              <li class="price-apps__advantages-list-item">
+                Розовый фильтр
+              </li>
+              <li class="price-apps__advantages-list-item">
+                Смайлики
+              </li>
+              <li class="price-apps__advantages-list-item">
+                Комментарии
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="controls">
+          <button type="button" class="controls__btn controls__btn_active"></button>
+          <button type="button" class="controls__btn"></button>
+          <button type="button" class="controls__btn"></button>
+        </div>
+      </section>
+      <section class="contacts">
+        <h2 class="contacts__title">
+          <span class="contacts__title-line">Остались вопросы?</span>
+          <span class="contacts__title-line">Свяжитесь с нами!</span>
+        </h2>
+        <div class="contacts__info">
+          <div class="contacts__info-item">
+            <h3 class="contacts__info-title">Звоните:</h3>
+            <a href="tel:+78125556666" class="contacts__info-link">+7 (812) 555-66-66</a>
+          </div>
+          <div class="contacts__info-item">
+            <h3 class="contacts__info-title">Пишите:</h3>
+            <a href="mailto:mail@htmlacademy.ru" class="contacts__info-link">mail@htmlacademy.ru</a>
+          </div>
+          <div class="contacts__info-item">
+            <h3 class="contacts__info-title">Приезжайте в гости:</h3>
+            <p class="contacts__info-text">ул. Большая Конюшенная, 19/8</p>
+          </div>
+        </div>
+        <div class="contacts__map"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <img src="img/footer-logo.svg" alt="Pink logo" class="footer__logo">
+      <ul class="footer__social">
+        <li class="footer__social-item">
+          <a href="https://twitter.com/" target="_blank" class="footer__social-item-link"></a>
+        </li>
+        <li class="footer__social-item">
+          <a href="https://ru-ru.facebook.com/" target="_blank" class="footer__social-item-link"></a>
+        </li>
+        <li class="footer__social-item">
+          <a href="https://www.youtube.com/" target="_blank" class="footer__social-item-link"></a>
+        </li>
+      </ul>
+      <p class="footer__copyright">Разработано
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+      </p>
+    </footer>
   </body>
 </html>
