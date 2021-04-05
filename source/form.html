@@ -20,7 +20,7 @@
             <a class="header__menu-link" href="catalog.html">Фотографии</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="form.html">Конкурс</a>
+            <a class="header__menu-link" href="#">Конкурс</a>
           </li>
           <li class="header__menu-item">
             <a class="header__menu-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
@@ -45,26 +45,26 @@
             <label class="user-form__label" for="father-name">Отчество:</label>
             <input id="father-name" class="user-form__input" name="father-name" type="text" placeholder="Ну и отчество тоже">
           </fieldset>
-          <div class="user-form__wrap user-form__wrap__checkbox">
+          <div class="user-form__wrap user-form__wrap_checkbox">
             <p class="user-form__wrap-title">Ваши безбашенные достижения в путешествии</p>
             <fieldset class="user-form__fieldset">
-              <label class="user-form__label" for="selfie">Сделал селфи с акулой</label>
               <input id="selfie" class="user-form__input user-form__input_checkbox" name="selfie" type="checkbox" checked>
+              <label class="user-form__label" for="selfie">Сделал селфи с акулой</label>
 
-              <label class="user-form__label" for="burnt">Обгорел на пляже</label>
               <input id="burnt" class="user-form__input user-form__input_checkbox" name="burnt" type="checkbox" checked>
+              <label class="user-form__label" for="burnt">Обгорел на пляже</label>
 
-              <label class="user-form__label" for="norris">Видел Чака Норриса</label>
               <input id="norris" class="user-form__input user-form__input_checkbox" name="norris" type="checkbox">
+              <label class="user-form__label" for="norris">Видел Чака Норриса</label>
 
-              <label class="user-form__label" for="souvenir">Накупил сувениров</label>
               <input id="souvenir" class="user-form__input user-form__input_checkbox" name="souvenir" type="checkbox">
+              <label class="user-form__label" for="souvenir">Накупил сувениров</label>
 
-              <label class="user-form__label" for="tower">Удержал башню</label>
               <input id="tower" class="user-form__input user-form__input_checkbox" name="tower" type="checkbox" checked>
+              <label class="user-form__label" for="tower">Удержал башню</label>
 
-              <label class="user-form__label" for="destroy">Разгромил отель</label>
               <input id="destroy" class="user-form__input user-form__input_checkbox" name="destroy" type="checkbox">
+              <label class="user-form__label" for="destroy">Разгромил отель</label>
             </fieldset>
           </div>
           <fieldset class="user-form__fieldset">
@@ -77,14 +77,14 @@
           <div class="user-form__wrap user-form__wrap_radio">
             <p class="user-form__wrap-title">С каким приложением путешествовали?</p>
             <fieldset class="user-form__fieldset">
-              <label class="user-form__label" for="ios">Pink для iOS</label>
               <input class="user-form__input user-form__input_radio" type="radio" value="Pink для iOS" id="ios" name="Apps" checked>
+              <label class="user-form__label" for="ios">Pink для iOS</label>
 
-              <label class="user-form__label" for="android">Pink на Android</label>
               <input class="user-form__input user-form__input_radio" type="radio" value="Pink на Android" id="android" name="Apps">
+              <label class="user-form__label" for="android">Pink на Android</label>
 
-              <label class="user-form__label" for="windows">Windows Phone</label>
               <input class="user-form__input user-form__input_radio" type="radio" value="Windows Phone" id="windows" name="Apps">
+              <label class="user-form__label" for="windows">Windows Phone</label>
             </fieldset>
           </div>
           <fieldset class="user-form__fieldset">
@@ -92,7 +92,7 @@
             <textarea class="user-form__input user-form__input_textarea" name="comment" id="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <button class="user-form__button" type="submit" id="submit">Отправить форму</button>
-          <label class="user-form__label" for="submit">* — обязательные поля</label>
+          <p class="user-form__required">* — обязательные поля</p>
         </form>
       </section>
     </main>
