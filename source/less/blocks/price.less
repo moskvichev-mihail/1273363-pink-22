@@ -1,0 +1,116 @@
+.price {
+  position: relative;
+  padding: 107px 0 0;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    background-color: @bgPrimaryColor;
+    transform: skewY(-3deg);
+    z-index: -1;
+  }
+
+  &__table {
+    width: calc(300% - 120px);
+    margin: 0 auto;
+    border-collapse: collapse;
+    line-height: 30px;
+    text-transform: uppercase;
+    transform: translateX(calc(-33.33333% + 20px));
+
+    &-name {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    &-value {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    &-row {
+      background-color: @lightColor;
+    }
+
+    &-head {
+      background-color: @bgPrimaryColor;
+      border-right: 2px solid @bgPrimaryColor;
+
+      &:first-child {
+        display: none;
+        border-right: none;
+      }
+    }
+
+    &-col {
+      position: relative;
+      padding: 13px 20px 15px;
+      border: 2px solid @borderColor;
+
+      &:first-child {
+        display: none;
+      }
+
+      &--yes {
+        &::before {
+          content: "";
+          background: url("../../img/yes.svg");
+          position: absolute;
+          width: 31px;
+          height: 21px;
+          top: 18px;
+          right: 19px;
+        }
+      }
+
+      &--no {
+        &::before {
+          content: "";
+          background: url("../../img/no.svg");
+          position: absolute;
+          width: 27px;
+          height: 27px;
+          top: 16px;
+          right: 21px;
+        }
+      }
+    }
+
+    .price-package {
+      padding: 19px 20px 35px;
+      background: @baseColor;
+      color: @lightColor;
+      border-top-left-radius: 3px;
+      line-height: 1;
+
+      &--hit {
+        position: relative;
+
+        &::before {
+          content: "";
+          background: url("../../img/hit-ribbon.png");
+          position: absolute;
+          top: 0;
+          left: -2px;
+          width: 74px;
+          height: 74px;
+        }
+
+        &::after {
+          content: "ХИТ";
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          font-weight: normal;
+          transform: translateX(-8px) translateY(10px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}

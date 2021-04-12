@@ -1,0 +1,59 @@
+.contacts {
+  padding: 42px 20px 15px;
+  text-align: center;
+
+  &__title {
+    margin: 0 0 34px;
+
+    &-line {
+      display: block;
+    }
+  }
+
+  &__info {
+    &-item {
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      margin: 0;
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 700;
+    }
+
+    &-link {
+      color: @brightColor;
+      font-size: 24px;
+      line-height: 32.68px;
+      font-weight: 300;
+
+      &:hover {
+        color: @baseColor;
+        text-decoration: 1px @baseColor underline;
+      }
+
+      &:focus {
+        outline: 1px dashed @baseColor;
+        outline-offset: 1px;
+      }
+
+      &:active {
+        opacity: 0.3;
+        text-decoration: none;
+      }
+    }
+
+    &-text {
+      color: @brightColor;
+      font-size: 24px;
+      line-height: 32.68px;
+      font-weight: 300;
+      margin-top: 0;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}

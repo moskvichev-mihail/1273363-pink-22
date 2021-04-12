@@ -1,0 +1,129 @@
+.header {
+  background-color: @baseColor;
+  color: @lightColor;
+  font-family: "Open Sans", "Arial", sans-serif;
+  margin: 0;
+
+  &__logo {
+    display: inline-flex;
+    flex: 1 0 auto;
+    padding: 23px 20px;
+  }
+
+  &__toggle {
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 21px 20px;
+
+    &-icon {
+      fill: @lightColor;
+    }
+
+    &:hover {
+      .header__toggle-icon {
+        fill: @brightColor;
+      }
+    }
+
+    &:focus {
+      outline: 1px dashed @lightColor;
+      outline-offset: -1px;
+    }
+
+    &:active {
+      .header__toggle-icon {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid @darkColor;
+    list-style: none;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 32px;
+    font-weight: bold;
+
+    &-item {
+      display: flex;
+      border-bottom: 1px solid @darkColor;
+      border-top: 1px solid #485461;
+    }
+
+    &-link {
+      color: @lightColor;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 100%;
+      display: block;
+      padding: 15px;
+      text-align: center;
+
+      &:hover {
+        color: @brightColor;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--closed {
+    position: sticky;
+    background-color: rgba(@darkColor, 0.3);
+
+    .header {
+      &__logo {
+        padding: 22px 20px 21px;
+      }
+
+      &__menu {
+        display: none;
+      }
+
+      &__toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &-icon {
+          &--close {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--opened {
+    .header {
+      &__logo {
+        padding: 22px 20px 21px 20px;
+      }
+
+      &__toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &-icon {
+          &--open {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

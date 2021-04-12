@@ -1,0 +1,83 @@
+.promo {
+  background: url("../../img/back-mobile.png") no-repeat;
+  background-color: @bgBaseColor;
+  margin-top: -66px;
+  padding-top: 66px;
+  color: @lightColor;
+
+  &__title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 210px;
+    padding: 29px 20px 23px;
+  }
+
+  &__link-download {
+    background-color: inherit;
+    border: 3px solid #ffffff;
+    border-radius: 29px;
+    box-sizing: border-box;
+    width: 280px;
+    height: 55px;
+    margin: 28px auto 38px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: @lightColor;
+      color: @brightColor;
+    }
+
+    &:focus {
+      outline: 1px dashed @lightColor;
+      outline-offset: 2px;
+    }
+
+    &:active {
+      color: rgba(@brightColor, 0.3);
+    }
+  }
+
+  &__apps-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 38px 0 31px;
+    padding: 0;
+  }
+
+  &__apps-item {
+    margin: 0 17.5px 10px;
+  }
+
+  &__apps-link {
+    display: inline-flex;
+
+    &:focus {
+      outline: 1px dashed @lightColor;
+      outline-offset: 3px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    max-width: 220px;
+    margin: 0 auto;
+    padding-bottom: 28px;
+  }
+}
