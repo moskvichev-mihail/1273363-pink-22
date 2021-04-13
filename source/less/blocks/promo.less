@@ -1,11 +1,11 @@
 .promo {
-  background: url("../../img/back-mobile.png") no-repeat;
-  background-color: @bgBaseColor;
+  background: @bgBaseColor url("../../img/back-mobile.png") no-repeat;
   margin-top: -66px;
   padding-top: 66px;
+  padding-bottom: 28px;
   color: @lightColor;
 
-  &__title {
+  .promo__title {
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
@@ -16,7 +16,7 @@
     padding: 29px 20px 23px;
   }
 
-  &__link-download {
+  .promo__link-download {
     background-color: inherit;
     border: 3px solid #ffffff;
     border-radius: 29px;
@@ -48,7 +48,7 @@
     }
   }
 
-  &__apps-list {
+  .promo__apps-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -58,11 +58,11 @@
     padding: 0;
   }
 
-  &__apps-item {
-    margin: 0 17.5px 10px;
+  .promo__apps-item {
+    margin: 0 18px 10px;
   }
 
-  &__apps-link {
+  .promo__apps-link {
     display: inline-flex;
 
     &:focus {
@@ -71,13 +71,12 @@
     }
   }
 
-  &__text {
+  .promo__text {
     text-align: center;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
     max-width: 220px;
     margin: 0 auto;
-    padding-bottom: 28px;
   }
 }

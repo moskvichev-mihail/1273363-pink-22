@@ -1,13 +1,17 @@
 .advantages {
   text-align: center;
   overflow: hidden;
+  margin-top: 41px;
+  padding-bottom: 40px;
+  background-color: @bgPrimaryColor;
 
-  &__title {
+  .advantages__title {
     position: relative;
     margin: 0;
     padding: 31px 20px 50px;
     font-size: 24px;
     font-weight: 300;
+    background-color: @lightColor;
 
     &::before {
       content: "";
@@ -22,7 +26,7 @@
     }
 
     &:first-child {
-      padding: 41px 20px 0;
+      padding: 0 20px;
 
       &::before {
         content: none;
@@ -30,21 +34,17 @@
     }
   }
 
-  &__list {
+  .advantages__list {
     position: relative;
     margin: 0;
-    padding: 86px 20px 30px;
+    padding: 86px 20px 0;
     list-style: none;
     background-color: @bgPrimaryColor;
 
-    &-title {
+    .advantages__list-title {
       margin: 0 0 12px;
       font-size: 18px;
       font-weight: 700;
-    }
-
-    &-text {
-      margin: 0 0 31px;
     }
   }
 }

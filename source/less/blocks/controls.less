@@ -1,9 +1,9 @@
 .controls {
   display: flex;
   justify-content: center;
-  margin: 45px 0 40px;
+  margin: 45px 0 0;
 
-  &__btn {
+  .controls__btn {
     width: 12px;
     height: 12px;
     margin: 0 6.5px;
@@ -28,8 +28,18 @@
 
     &--active {
       background-color: @lightColor;
-      border-color: @baseColor;
+      border: 3px solid @baseColor;
       cursor: default;
+    }
+  }
+
+  &--reviews {
+    .controls__btn {
+      border: 3px solid #f2f2f2;
+
+      &--active {
+        border: 3px solid @baseColor;
+      }
     }
   }
 }
