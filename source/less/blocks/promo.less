@@ -4,79 +4,79 @@
   padding-top: 66px;
   padding-bottom: 28px;
   color: @lightColor;
+}
 
-  .promo__title {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 210px;
-    padding: 29px 20px 23px;
+.promo__title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 210px;
+  padding: 29px 20px 23px;
+}
+
+.promo__link-download {
+  background-color: inherit;
+  border: 3px solid #ffffff;
+  border-radius: 29px;
+  box-sizing: border-box;
+  width: 280px;
+  height: 55px;
+  margin: 28px auto 38px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: @lightColor;
+    color: @brightColor;
   }
 
-  .promo__link-download {
-    background-color: inherit;
-    border: 3px solid #ffffff;
-    border-radius: 29px;
-    box-sizing: border-box;
-    width: 280px;
-    height: 55px;
-    margin: 28px auto 38px;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 18px;
-    font-style: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-
-    &:hover {
-      background-color: @lightColor;
-      color: @brightColor;
-    }
-
-    &:focus {
-      outline: 1px dashed @lightColor;
-      outline-offset: 2px;
-    }
-
-    &:active {
-      color: rgba(@brightColor, 0.3);
-    }
+  &:focus {
+    outline: 1px dashed @lightColor;
+    outline-offset: 2px;
   }
 
-  .promo__apps-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 38px 0 31px;
-    padding: 0;
+  &:active {
+    color: rgba(@brightColor, 0.3);
   }
+}
 
-  .promo__apps-item {
-    margin: 0 18px 10px;
+.promo__apps-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 38px 0 31px;
+  padding: 0;
+}
+
+.promo__apps-item {
+  margin: 0 18px 10px;
+}
+
+.promo__apps-link {
+  display: inline-flex;
+
+  &:focus {
+    outline: 1px dashed @lightColor;
+    outline-offset: 3px;
   }
+}
 
-  .promo__apps-link {
-    display: inline-flex;
-
-    &:focus {
-      outline: 1px dashed @lightColor;
-      outline-offset: 3px;
-    }
-  }
-
-  .promo__text {
-    text-align: center;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    max-width: 220px;
-    margin: 0 auto;
-  }
+.promo__text {
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  max-width: 220px;
+  margin: 0 auto;
 }

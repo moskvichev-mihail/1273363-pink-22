@@ -3,88 +3,88 @@
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
+}
 
-  .footer__link {
-    display: block;
-    text-decoration: none;
+.footer__link {
+  display: block;
+  text-decoration: none;
+}
 
-    .footer__link-logo {
-      margin-bottom: 27px;
+.footer__link-logo {
+  margin-bottom: 27px;
 
-      &:hover {
-        fill: @brightColor;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
-    }
+  &:hover {
+    fill: @brightColor;
   }
 
-  .footer__social {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  &:active {
+    opacity: 0.3;
+  }
+}
 
-    .footer__social-item {
-      margin: 10px 4px;
+.footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-      .footer__social-item-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border: 3px solid rgba(@baseColor, 0.1);
-        border-radius: 50%;
-        width: 48px;
-        height: 48px;
+.footer__social-item {
+  margin: 10px 4px;
+}
 
-        &:hover {
-          border-color: @baseColor;
-        }
+.footer__social-item-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(@baseColor, 0.1);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
 
-        &:focus {
-          outline: 1px dashed @baseColor;
-          outline-offset: 1px;
-        }
-
-        &:active {
-          border-color: rgba(@baseColor, 0.1);
-
-          .footer__social-item-logo {
-            opacity: 0.3;
-          }
-        }
-      }
-    }
+  &:hover {
+    border-color: @baseColor;
   }
 
-  .footer__copyright {
-    display: flex;
-    align-items: center;
-    margin: 28px auto 0;
-    line-height: 16px;
+  &:focus {
+    outline: 1px dashed @baseColor;
+    outline-offset: 1px;
+  }
 
-    .footer__copyright-link {
-      margin-left: 14px;
+  &:active {
+    border-color: rgba(@baseColor, 0.1);
 
-      &:focus {
-        outline: 1px dashed @baseColor;
-        outline-offset: 3px;
-      }
+    .footer__social-item-logo {
+      opacity: 0.3;
     }
+  }
+}
 
-    .footer__copyright-logo {
-      fill: @brightColor;
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  margin: 28px auto 0;
+  line-height: 16px;
+}
 
-      &:hover {
-        fill: @baseColor;
-      }
+.footer__copyright-link {
+  margin-left: 14px;
 
-      &:active {
-        opacity: 0.3;
-      }
-    }
+  &:focus {
+    outline: 1px dashed @baseColor;
+    outline-offset: 3px;
+  }
+}
+
+.footer__copyright-logo {
+  fill: @brightColor;
+
+  &:hover {
+    fill: @baseColor;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
