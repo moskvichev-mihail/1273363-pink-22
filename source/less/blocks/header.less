@@ -51,6 +51,16 @@
   display: inline-flex;
   flex: 1 0 auto;
   padding: 23px 20px;
+
+  &:hover {
+    .header__logo-img {
+      fill: @baseColor;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .header__toggle {
