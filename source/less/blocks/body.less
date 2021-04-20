@@ -1,6 +1,10 @@
 .body {
   font-family: "Open Sans", "Arial", sans-serif;
-  max-width: 320px;
-  width: 100%;
+  min-width: 320px;
+  .resize(max-width, 320, 660, 1200);
   margin: 0 auto;
+  .resize(font-size, 14, 14, 18);
+  .resize(line-height, 24, 24, 30);
+
+  .centered;
 }

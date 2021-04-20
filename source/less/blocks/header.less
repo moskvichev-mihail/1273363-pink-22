@@ -1,10 +1,13 @@
 .header {
   background-color: @baseColor;
   color: @lightColor;
-  margin: 0;
 
   &--closed {
-    position: sticky;
+    position: absolute;
+    top: 0;
+    max-width: 320px;
+    width: 100%;
+    z-index: 10;
     background-color: rgba(@darkColor, 0.3);
 
     .header__logo {

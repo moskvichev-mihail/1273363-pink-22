@@ -1,3 +1,123 @@
 .gallery {
+  padding: 45px 20px 20px;
+}
+
+.gallery__text {
+  line-height: 30px;
   text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 0 14px 60px;
+}
+
+.gallery__list {
+  padding: 0;
+  list-style: none;
+
+  .resetMargin;
+}
+
+.gallery__list-item {
+  margin-bottom: 20px;
+
+  &--full {
+    .gallery__list-item-link {
+      position: relative;
+      display: block;
+      margin-left: -20px;
+      margin-right: -20px;
+
+      &::after {
+        content: "ПАНОРАМА ДНЯ";
+        position: absolute;
+        top: 0;
+        right: 20px;
+        width: 140px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: @brightColor;
+        color: @lightColor;
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &:nth-of-type(n+3) {
+    .photo__comment {
+      margin-bottom: 17px;
+    }
+  }
+
+  &:nth-of-type(4) {
+    .photo__comment {
+      margin-bottom: 16px;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.gallery__list-item-link {
+  &:focus {
+    outline-offset: -1px;
+  }
+}
+
+.gallery__list-item-photo {
+  display: block;
+}
+
+.gallery__list-item-info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px 10px 23px 17px;
+  background: @bgPrimaryColor;
+}
+
+.gallery__list-item-author {
+  margin: 0 3px 0 0;
+  font-weight: 700;
+}
+
+.gallery__list-item-time {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.gallery__list-item-comment {
+  flex: 1 0 100%;
+  margin: 0 0 15px;
+  white-space: pre-line;
+}
+
+.gallery__list-item-like {
+  position: relative;
+  padding-left: 31px;
+  font-size: 12px;
+  text-align: right;
+  text-transform: uppercase;
+  color: @brightColor;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 13px;
+    height: 12px;
+    background: url("../../img/heart.svg");
+  }
+
+  &:focus {
+    outline: 1px dashed @baseColor;
+    outline-offset: 2px;
+  }
 }

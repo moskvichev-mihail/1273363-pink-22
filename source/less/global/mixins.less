@@ -1,0 +1,17 @@
+.resetMargin() {
+  &--no-margin {
+    margin: 0;
+  }
+}
+
+.centered() {
+  &--centered {
+    margin: 0 auto;
+  }
+}
+
+.resize(@property, @min: false, @mid: false, @max: false) {
+  & when (isnumber(@min)) {
+    @{property}: @min*1px;
+  }
+}
