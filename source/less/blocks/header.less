@@ -5,23 +5,39 @@
   &--closed {
     position: absolute;
     top: 0;
-    max-width: 320px;
+    .resize(max-width, 320, 660, 100%);
     width: 100%;
     z-index: 10;
     background-color: rgba(@darkColor, 0.3);
 
     .header__logo {
       padding: 22px 20px 21px;
+
+      @media (min-width: @bpTablet) {
+        padding: 27px 20px 43px;
+      }
+
+      @media (min-width: @bpDesktop) {
+        padding: 27px 0 43px;
+      }
     }
 
     .header__menu {
       display: none;
+
+      @media (min-width: @bpDesktop) {
+        display: flex;
+      }
     }
 
     .header__toggle {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
+      @media (min-width: @bpDesktop) {
+        display: none;
+      }
     }
 
     .header__toggle-icon {
@@ -34,12 +50,24 @@
   &--opened {
     .header__logo {
       padding: 22px 20px 21px 20px;
+
+      @media (min-width: @bpTablet) {
+        padding: 27px 20px 43px;
+      }
+
+      @media (min-width: @bpDesktop) {
+        padding: 27px 0 43px;
+      }
     }
 
     .header__toggle {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
+      @media (min-width: @bpDesktop) {
+        display: none;
+      }
     }
 
     .header__toggle-icon {
@@ -47,6 +75,13 @@
         display: none;
       }
     }
+  }
+
+  @media (min-width: @bpDesktop) {
+    display: flex;
+    align-items: center;
+    padding: 0 130px;
+    background-color: rgba(@darkColor, 0.3);
   }
 }
 
@@ -63,6 +98,27 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @bpTablet) {
+    padding: 27px 20px 43px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 27px 0 43px;
+  }
+}
+
+.header__logo-img {
+  display: block;
+
+  @media (min-width: @bpTablet) {
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    width: 147px;
   }
 }
 
@@ -97,6 +153,9 @@
 
 .header__nav {
   display: flex;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .header__menu {
@@ -110,12 +169,25 @@
   font-style: normal;
   line-height: 32px;
   font-weight: bold;
+
+  @media (min-width: @bpDesktop) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    max-width: 60%;
+    width: 100%;
+  }
 }
 
 .header__menu-item {
   display: flex;
   border-bottom: 1px solid @darkColor;
   border-top: 1px solid #485461;
+
+  @media (min-width: @bpDesktop) {
+    border: none;
+  }
 }
 
 .header__menu-link {
@@ -133,5 +205,9 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @bpDesktop) {
+    text-transform: none;
   }
 }

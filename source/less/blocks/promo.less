@@ -1,19 +1,78 @@
 .promo {
   background: @bgBaseColor url("../../img/back-mobile.png") no-repeat;
-  padding-top: 66px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .resize(padding-top, 66, 110);
   padding-bottom: 28px;
   color: @lightColor;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 286px;
+    background: url("../../img/iphone-hand-mobile.png") no-repeat;
+    order: 1;
+
+    @media (min-width: @bpTablet) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 545px;
+      background-image: url("../../img/iphone-hand-tablet.png");
+      z-index: -1;
+    }
+
+    @media (min-width: @bpDesktop) {
+      right: 4px;
+      left: auto;
+      height: 645px;
+      max-width: calc(100% - 150px);
+      background-image: url("../../img/iphone-hand-desktop.png");
+    }
+  }
+
+  &--with-bg {
+    z-index: 1;
+  }
+
+  @media (min-width: @bpTablet) {
+    min-height: 619px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background: @baseColor url("../../img/back-tablet.jpg") no-repeat;
+    padding-bottom: 109px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    min-height: 743px;
+    padding-right: 130px;
+    padding-left: 130px;
+    background: @baseColor url("../../img/back-desktop.jpg") no-repeat;
+  }
 }
 
 .promo__title {
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 29px;
+  .resize(font-size, 24, 40, 50);
+  .resize(line-height, 29, 48, 68);
   text-align: center;
   margin: 0 auto;
   max-width: 210px;
   padding: 29px 20px 23px;
+
+  @media (min-width: @bpTablet) {
+    max-width: 300px;
+    width: 100%;
+    padding: 90px 30px 20px;
+    margin-left: 0;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding-top: 100px;
+  }
 }
 
 .promo__link-download {
@@ -26,12 +85,13 @@
   margin: 28px auto 38px;
   color: #ffffff;
   font-weight: 700;
-  font-size: 18px;
+  .resize(font-size, 18, 18, 21);
   font-style: normal;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  order: 2;
 
   &:hover {
     background-color: @lightColor;
@@ -46,6 +106,13 @@
   &:active {
     color: rgba(@brightColor, 0.3);
   }
+
+  @media (min-width: @bpTablet) {
+    margin-left: 0;
+    margin-top: 9px;
+    width: 300px;
+    background: transparent;
+  }
 }
 
 .promo__apps-list {
@@ -56,6 +123,13 @@
   justify-content: center;
   margin: 38px 0 31px;
   padding: 0;
+  order: 3;
+
+  @media (min-width: @bpTablet) {
+    max-width: 290px;
+    margin-top: 13px;
+    margin-bottom: 22px;
+  }
 }
 
 .promo__apps-item {
@@ -78,4 +152,15 @@
   font-size: 14px;
   max-width: 220px;
   margin: 0 auto;
+  order: 4;
+
+  @media (min-width: @bpTablet) {
+    font-size: 18px;
+    margin-left: 0;
+    max-width: 300px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    line-height: 24px;
+  }
 }

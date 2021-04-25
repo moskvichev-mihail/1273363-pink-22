@@ -14,4 +14,16 @@
   & when (isnumber(@min)) {
     @{property}: @min*1px;
   }
+
+  & when (isnumber(@mid)) {
+    @media (min-width: @bpTablet) {
+      @{property}: @mid*1px;
+    }
+  }
+
+  & when (isnumber(@max)) {
+    @media (min-width: @bpDesktop) {
+      @{property}: @max*1px;
+    }
+  }
 }

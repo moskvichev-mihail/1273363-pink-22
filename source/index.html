@@ -11,7 +11,11 @@
     <header class="header header--closed">
       <nav class="header__nav">
         <a class="header__logo">
-          <img class="header__logo-img" src="img/pink.svg" alt="Логотип Пинк" width="74" height="23" />
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/header-logo-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/header-logo-tablet.svg">
+            <img class="header__logo-img" src="img/header-logo-mobile.svg" alt="Логотип Пинк" width="74" height="23" />
+          </picture>
         </a>
         <button type="button" class="header__toggle" aria-label="Открыть или закрыть мобильное меню">
           <svg class="header__toggle-icon header__toggle-icon--open" width="50" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -41,11 +45,8 @@
     </header>
     <main>
       <h1 class="visually-hidden">Пинк</h1>
-      <section class="promo">
+      <section class="promo promo--with-bg">
         <h2 class="promo__title">Взгляните на жизнь иначе!</h2>
-        <picture class="promo-picture">
-          <img class="promo-picture__img" src="img/iphone-hand-mobile.png" alt="Приложение для смартфона" />
-        </picture>
         <a href="https://www.apple.com/ru/app-store/" target="_blank" class="promo__link-download">Скачать
           приложение</a>
         <ul class="promo__apps-list">
@@ -99,6 +100,14 @@
               новых</p>
           </li>
         </ul>
+      </section>
+      <section class="research">
+        <h2 class="research-title research-title--no-margin">Эффект
+          на 24 часа!</h2>
+        <p class="research-text research-text--no-margin">Британские ученые провели исследования и доказали,
+          что положительный эффект от использования приложения
+          длится целые сутки!</p>
+        <a href="#" class="research-link">Узнать больше об исследовании</a>
       </section>
       <section class="reviews">
         <ul class="reviews__list">

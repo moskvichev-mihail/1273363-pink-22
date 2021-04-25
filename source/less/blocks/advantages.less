@@ -9,7 +9,8 @@
   position: relative;
   margin: 0;
   padding: 40px 20px 50px;
-  font-size: 24px;
+  .resize(line-height, 29, 54.47, 68);
+  .resize(font-size, 24, 40, 50);
   font-weight: 300;
   background-color: @lightColor;
 
@@ -23,14 +24,28 @@
     background-color: @lightColor;
     transform: skewY(-6deg);
     z-index: 1;
+
+    @media (min-width: @bpTablet) {
+      bottom: -38px;
+      top: 80px;
+    }
   }
 
   &:first-child {
     padding: 46px 20px 0;
 
+    @media (min-width: @bpTablet) {
+      padding-top: 58px;
+    }
+
     &::before {
       content: none;
     }
+  }
+
+  @media (min-width: @bpTablet) {
+    padding-bottom: 60px;
+    padding-top: 0;
   }
 }
 

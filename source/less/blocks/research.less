@@ -1,0 +1,88 @@
+.research {
+  position: relative;
+  display: none;
+
+  .resetMargin;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 54px;
+    left: 20px;
+    width: 238px;
+    height: 276px;
+    background: url("../../img/timer.svg");
+    background-size: contain;
+
+    @media (min-width: @bpDesktop) {
+      top: 17px;
+      left: 130px;
+      width: 298px;
+      height: 345px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "24";
+    top: 122px;
+    left: 51px;
+    width: 177px;
+    height: 177px;
+    .resize(font-size, 96, 96, 120);
+    font-weight: 700;
+    line-height: 144px;
+    text-align: center;
+    background-color: @lightColor;
+    color: @brightColor;
+    border: 16px solid @brightColor;
+    border-radius: 50%;
+
+    @media (min-width: @bpDesktop) {
+      top: 88px;
+      left: 154px;
+      width: 218px;
+      height: 218px;
+      line-height: 212px;
+      background-color: @bgPrimaryColor;
+    }
+  }
+
+  @media (min-width: @bpTablet) {
+    display: block;
+    padding: 96px 0 70px 50%;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 112px 130px 112px 499px;
+    background-color: @bgPrimaryColor;
+  }
+}
+
+.research-title {
+  font-size: 30px;
+  .resize(line-height, 36, 36, 30);
+  white-space: pre-line;
+
+  .resetMargin;
+
+  @media (min-width: @bpDesktop) {
+    white-space: normal;
+  }
+}
+
+
+.research-text {
+  padding: 10px 0;
+
+  .resetMargin;
+
+  @media (min-width: @bpDesktop) {
+    padding: 25px 0 30px;
+    white-space: pre-line;
+  }
+}
+
+.research-link {
+  color: @brightColor;
+}
