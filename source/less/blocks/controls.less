@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
 
-  &--reviews {
+  &--price {
     .controls__btn {
       border: 3px solid #f2f2f2;
 
@@ -11,6 +11,12 @@
       }
     }
 
+    @media (min-width: @bpTablet) {
+      display: none;
+    }
+  }
+
+  &--reviews {
     @media (min-width: @bpTablet) {
       display: none;
     }

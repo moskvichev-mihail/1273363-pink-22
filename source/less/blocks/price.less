@@ -6,17 +6,20 @@
   &::before {
     content: "";
     position: absolute;
-    top: 15px;
-    bottom: -15px;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    background-color: @bgPrimaryColor;
-    transform: skewY(-3deg);
+    border-right: 100vw solid @bgPrimaryColor;
+    border-top: 32px solid transparent;
     z-index: -1;
 
     @media (min-width: @bpTablet) {
-      top: 17px;
-      bottom: -20px;
+      border-top-width: 54px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      border-top-width: 68px;
     }
   }
 }
@@ -33,6 +36,11 @@
     width: 100%;
     transform: none;
     background-color: @bgPrimaryColor;
+  }
+
+  @media (min-width: @bpDesktop) {
+    max-width: 940px;
+    margin: 0 auto;
   }
 }
 
