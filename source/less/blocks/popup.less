@@ -1,39 +1,61 @@
 .popup {
   display: none;
   width: 100%;
-  max-width: 460px;
+  .resize(max-width, 100%, 460, 780);
   font-size: 18px;
   line-height: 24px;
   text-align: center;
-  padding: 49px 80px 52px;
+  padding: 41px 0 0;
   background: @lightColor;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   border-radius: 5px;
-  transform: translate(-50%, -50%);
   box-sizing: border-box;
-  z-index: 10;
 
   &--wrong {
     position: fixed;
     top: 50%;
     left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+
+    .popup__text {
+      .resize(margin-bottom, false, 33, 63);
+    }
+
+    .popup__footer {
+      @media (min-width: @bpDesktop) {
+        background-color: @bgPrimaryColor;
+      }
+    }
+
+    .popup__button {
+      max-width: 300px;
+      .resize(margin-bottom, false, 52, 0);
+    }
   }
 
   &--success {
     position: fixed;
     top: 50%;
     left: 50%;
-    padding: 49px 74px 0;
+    z-index: 10;
+    transform: translate(-50%, -50%);
 
-    .popup__text {
-      margin-bottom: 30px;
+    .popup__footer {
+      padding: 50px 80px 50px 81px;
+      background-color: @bgPrimaryColor;
+
+      @media (min-width: @bpDesktop) {
+        padding: 50px 160px;
+      }
     }
   }
 }
 
 .popup__title {
-  margin: 0 0 22px;
-  padding: 0 30px;
+  .resize(max-width, false, 250, 400);
+  width: 100%;
+  margin: 0 auto 22px;
   color: @darkColor;
   font-size: 30px;
   font-weight: 700;
@@ -41,19 +63,21 @@
 }
 
 .popup__text {
-  margin: 0 auto 33px;
+  .resize(max-width, false, 320, 400);
+  width: 100%;
+  margin: 0 auto 30px;
 }
 
 .popup__footer {
-  margin: 0 -75px;
-  padding: 50px 82px 50px 83px;
-  background-color: @bgPrimaryColor;
+  @media (min-width: @bpDesktop) {
+    padding: 50px 160px;
+  }
 }
 
 .popup__button {
   width: 100%;
   margin: 0 auto;
-  padding: 19.5px 20px;
+  padding: 20px;
   font-size: 18px;
   font-weight: 700;
   color: @lightColor;
@@ -61,6 +85,7 @@
   border: 2px solid @btnColor;
   border-radius: 4px;
   text-transform: uppercase;
+  box-sizing: border-box;
   cursor: pointer;
 
   &:hover {
@@ -75,7 +100,7 @@
   }
 
   &--disabled {
-    background: #e5e5e5;
-    border-color: #e5e5e5;
+    background: @borderColor;
+    border-color: @borderColor;
   }
 }
