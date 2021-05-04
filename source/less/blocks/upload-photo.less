@@ -1,12 +1,18 @@
 .upload-photo {
   padding-top: 20px;
+
+  @media (min-width: @bpDesktop) {
+    max-width: 940px;
+    width: 100%;
+
+    .centered;
+  }
 }
 
 .upload-photo__title {
   padding: 0 20px 42px;
   text-align: center;
   line-height: 30px;
-  white-space: pre-line;
   font-size: 14px;
   font-weight: 400;
 
