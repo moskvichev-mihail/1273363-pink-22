@@ -16,6 +16,12 @@
   padding: 0;
   list-style: none;
 
+  @media (min-width: @bpTablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   @media (min-width: @bpDesktop) {
     max-width: 940px;
     width: 100%;
@@ -26,6 +32,12 @@
 
 .gallery__list-item {
   margin-bottom: 20px;
+
+  @media (min-width: @bpTablet) {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+  }
 
   &--full {
     .gallery__list-item-link {
@@ -50,6 +62,10 @@
         font-weight: 700;
       }
     }
+
+    @media (min-width: @bpTablet) {
+      flex-basis: 100%;
+    }
   }
 
   &:nth-of-type(n+3) {
@@ -66,6 +82,10 @@
 
   &:last-of-type {
     margin-bottom: 0;
+
+    @media (min-width: @bpTablet) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -77,13 +97,31 @@
 
 .gallery__list-item-photo {
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery__list-item-info {
   display: flex;
   flex-wrap: wrap;
-  padding: 25px 10px 23px 17px;
+  padding: 18px 10px 19px 17px;
   background: @bgPrimaryColor;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 24px;
+
+  @media (min-width: @bpTablet) {
+    flex-direction: column;
+    flex-grow: 1;
+    height: 155px;
+    padding: 24px 30px 22px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding-left: 27px;
+  }
 }
 
 .gallery__list-item-author {
@@ -98,13 +136,17 @@
 }
 
 .gallery__list-item-comment {
-  flex: 1 0 100%;
-  margin: 0 0 15px;
+  width: 100%;
+  margin: 0 0 9px;
+
+  @media (min-width: @bpTablet) {
+    flex-grow: 1;
+    margin-bottom: 11px;
+  }
 }
 
 .gallery__list-item-like {
   position: relative;
-  padding-left: 31px;
   font-size: 12px;
   text-align: right;
   text-transform: uppercase;
@@ -112,14 +154,28 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 0;
+
+  @media (min-width: @bpTablet) {
+    justify-content: space-between;
+  }
 
   &::before {
     content: "";
-    position: absolute;
-    left: 0;
+    display: block;
+    margin-right: 19px;
     width: 13px;
     height: 12px;
     background: url("../../img/heart.svg");
+
+    @media (min-width: @bpTablet) {
+      order: 2;
+      margin-right: 0;
+      margin-left: 17px;
+    }
   }
 
   &:focus {

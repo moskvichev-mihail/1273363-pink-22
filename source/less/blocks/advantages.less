@@ -42,6 +42,11 @@
 
 .advantages__container {
   position: relative;
+  padding-bottom: 288px;
+
+  @media (min-width: @bpTablet) {
+    padding-bottom: 0;
+  }
 
   &::before {
     content: "";
@@ -69,6 +74,10 @@
   padding: 86px 20px 40px;
   list-style: none;
 
+  @media (min-width: @bpTablet) {
+    padding: 86px 20px 20px;
+  }
+
   @media (min-width: @bpDesktop) {
     max-width: 940px;
     margin: 0 auto;
@@ -79,8 +88,85 @@
 }
 
 .advantages__list-item {
+  &:first-child {
+    &::before {
+      @media (min-width: @bpDesktop) {
+        position: absolute;
+        top: 0;
+        right: 7px;
+        left: 0;
+        width: 186px;
+        height: 300px;
+        background: url("../../img/iphone-screen-1-desktop.png");
+        content: "";
+        margin: auto;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    &::before {
+      @media (min-width: @bpDesktop) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 186px;
+        height: 300px;
+        background: url("../../img/iphone-screen-2-desktop.png");
+        content: "";
+        margin: auto;
+      }
+    }
+  }
+
+  &:last-child {
+    &::before {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 157px;
+      height: 278px;
+      background: url("../../img/iphone-screen-3-mobile.png");
+      content: "";
+      margin: auto;
+
+      @media (min-width: @bpTablet) {
+        top: 25px;
+        right: auto;
+        bottom: auto;
+        left: 20px;
+        width: 268px;
+        height: 480px;
+        background-image: url("../../img/iphone-screen-3-tablet.png");
+      }
+
+      @media (min-width: @bpDesktop) {
+        top: 0;
+        left: 7px;
+        right: 0;
+        width: 186px;
+        height: 300px;
+        background-image: url("../../img/iphone-screen-3-desktop.png");
+      }
+    }
+  }
+
+  @media (min-width: @bpTablet) {
+    max-width: 310px;
+    width: 100%;
+    margin-bottom: 35px;
+    margin-left: auto;
+    text-align: left;
+  }
+
   @media (min-width: @bpDesktop) {
-    max-width: 27%;
+    position: relative;
+    max-width: 300px;
+    margin: 0;
+    padding: 357px 10px 10px;
+    text-align: center;
   }
 }
 

@@ -2,6 +2,7 @@
   padding: 41px 20px;
   text-align: center;
   line-height: 30px;
+  position: relative;
 
   @media (min-width: @bpTablet) {
     padding-bottom: 12px;
@@ -9,6 +10,10 @@
 
   @media (min-width: @bpDesktop) {
     padding: 185px 130px 34px;
+    max-width: 940px;
+    width: 100%;
+
+    .centered;
   }
 }
 
@@ -93,7 +98,7 @@
 
 .reviews__button {
   position: absolute;
-  top: 30px;
+  top: 45%;
   padding: 0;
   background-color: transparent;
   border: none;

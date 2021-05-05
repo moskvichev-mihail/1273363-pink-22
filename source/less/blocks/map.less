@@ -1,0 +1,59 @@
+.map {
+  position: relative;
+  min-height: 200px;
+  background: url("../../img/map-mobile.jpg") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-top: 33px solid @lightColor;
+
+    @media (min-width: @bpTablet) {
+      border-top-width: 68px;
+      border-right-width: 330px;
+      border-left-width: 330px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      border-top-width: 103px;
+      border-right-width: 50vw;
+      border-left-width: 50vw;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 18px);
+    width: 36px;
+    height: 36px;
+    background: url("../../img/map-marker.svg");
+    background-size: cover;
+
+    @media (min-width: @bpTablet) {
+      top: calc(50% + 7px);
+    }
+
+    @media (min-width: @bpDesktop) {
+      top: calc(50% + 13px);
+    }
+  }
+
+  @media (min-width: @bpTablet) {
+    min-height: 374px;
+    background: url("../../img/map-tablet.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: @bpDesktop) {
+    min-height: 502px;
+    background: url("../../img/map-desktop.jpg") no-repeat;
+    background-size: cover;
+  }
+}
