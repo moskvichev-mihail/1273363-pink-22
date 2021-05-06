@@ -15,36 +15,43 @@
 .gallery__list {
   padding: 0;
   list-style: none;
+  .resize(max-width, 320, 660, 1200);
+
+  .centered;
 
   @media (min-width: @bpTablet) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  @media (min-width: @bpDesktop) {
-    max-width: 940px;
-    width: 100%;
-
-    .centered;
+    justify-content: center;
   }
 }
 
 .gallery__list-item {
   margin-bottom: 20px;
+  padding: 0 20px;
 
   @media (min-width: @bpTablet) {
     display: flex;
     flex-direction: column;
     flex-basis: 300px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 0 10px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin-bottom: 34px;
+    flex-basis: 320px;
   }
 
   &--full {
+    padding: 0;
+
     .gallery__list-item-link {
       position: relative;
       display: block;
-      margin-left: -20px;
-      margin-right: -20px;
+      .resize(height, 137, 509, 506);
+      margin: 0;
 
       &::after {
         content: "ПАНОРАМА ДНЯ";
@@ -60,36 +67,71 @@
         color: @lightColor;
         font-size: 12px;
         font-weight: 700;
+
+        @media (min-width: @bpTablet) {
+          top: 57px;
+        }
+
+        @media (min-width: @bpDesktop) {
+          top: 54px;
+          right: 130px;
+        }
       }
     }
 
     @media (min-width: @bpTablet) {
       flex-basis: 100%;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    .gallery__list-item-info {
+      margin: 0 20px;
+
+      @media (min-width: @bpTablet) {
+        flex-direction: row;
+        min-height: auto;
+        padding: 24px 30px 13px;
+      }
+
+      @media (min-width: @bpDesktop) {
+        max-width: 940px;
+        margin: 0 auto;
+        padding-left: 27px;
+      }
+    }
+
+    .gallery__list-item-comment {
+      @media (min-width: @bpTablet) {
+        order: 2;
+      }
+    }
+
+    .gallery__list-item-like {
+      @media (min-width: @bpTablet) {
+        margin-left: auto;
+        width: fit-content;
+      }
     }
   }
 
   &:nth-of-type(n+3) {
     .gallery__list-item-comment {
-      margin-bottom: 17px;
+      margin-bottom: 11px;
     }
   }
 
   &:nth-of-type(4) {
     .gallery__list-item-comment {
-      margin-bottom: 16px;
-    }
-  }
-
-  &:last-of-type {
-    margin-bottom: 0;
-
-    @media (min-width: @bpTablet) {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   }
 }
 
 .gallery__list-item-link {
+  display: block;
+  .resize(height, 180, 300, 400);
+
   &:focus {
     outline-offset: -1px;
   }
@@ -115,7 +157,7 @@
   @media (min-width: @bpTablet) {
     flex-direction: column;
     flex-grow: 1;
-    height: 155px;
+    min-height: 155px;
     padding: 24px 30px 22px;
   }
 
@@ -148,6 +190,7 @@
 .gallery__list-item-like {
   position: relative;
   font-size: 12px;
+  line-height: 24px;
   text-align: right;
   text-transform: uppercase;
   color: @brightColor;
@@ -157,7 +200,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding-left: 0;
+  padding: 0;
 
   @media (min-width: @bpTablet) {
     justify-content: space-between;
@@ -169,7 +212,7 @@
     margin-right: 19px;
     width: 13px;
     height: 12px;
-    background: url("../../img/heart.svg");
+    background: url("../../img/heart.svg") no-repeat;
 
     @media (min-width: @bpTablet) {
       order: 2;

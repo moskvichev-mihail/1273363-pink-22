@@ -170,10 +170,6 @@
   &:hover {
     .upload-form__button-icon {
       fill: rgba(@baseColor, 0.5);
-
-      @media (min-width: @bpTablet) {
-        fill: @brightColor;
-      }
     }
   }
 }
@@ -182,10 +178,6 @@
   width: 100%;
   height: 100%;
   fill: rgba(@baseColor, 0.3);
-
-  @media (min-width: @bpTablet) {
-    fill: @brightColor;
-  }
 }
 
 .upload-form__controls {
@@ -283,6 +275,10 @@
   &:focus {
     outline: 1px dashed;
     outline-offset: 2px;
+  }
+
+  &:active {
+    background-color: @brightColor;
   }
 }
 
