@@ -24,11 +24,11 @@
     left: calc(50% - 310px);
     width: 238px;
     height: 276px;
-    background: url("../../img/timer.svg");
+    background: url("../../img/icons/timer.svg");
     background-size: contain;
 
     @media (min-width: @bpDesktop) {
-      top: 17px;
+      top: 40px;
       left: calc(50% - 470px);
       width: 298px;
       height: 345px;
@@ -53,7 +53,7 @@
     border-radius: 50%;
 
     @media (min-width: @bpDesktop) {
-      top: 102px;
+      top: 126px;
       left: calc(50% - 430px);
       width: 220px;
       height: 220px;
@@ -68,7 +68,7 @@
   }
 
   @media (min-width: @bpDesktop) {
-    padding: 112px 0 112px 389px;
+    padding: 135px 0 112px 370px;
     max-width: 940px;
     margin: 0 auto;
   }
@@ -79,6 +79,14 @@
   .resize(line-height, 36, 36, 30);
 
   .resetMargin;
+
+  @media (min-width: @bpTablet) {
+    max-width: 200px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    max-width: 100%;
+  }
 }
 
 

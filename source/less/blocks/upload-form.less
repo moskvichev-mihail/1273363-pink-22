@@ -74,7 +74,7 @@
 
   @media (min-width: @bpDesktop) {
     grid-column-end: 4;
-    padding-left: 23px;
+    padding-left: 44px;
   }
 }
 
@@ -122,13 +122,24 @@
   border: none;
   cursor: pointer;
 
+  &:focus {
+    outline: 1px dashed;
+    outline-offset: 5px;
+  }
+
+  &:hover {
+    .upload-form__button-icon {
+      fill: rgba(@baseColor, 0.5);
+    }
+  }
+
   @media (min-width: @bpTablet) {
     flex: 0 0 auto;
     margin-right: 12px;
   }
 
   @media (min-width: @bpDesktop) {
-    margin-right: 42px;
+    margin-right: 18px;
   }
 
   &--cut {
@@ -155,21 +166,12 @@
 
     .upload-form__button-icon {
       fill: @brightColor;
+    }
 
-      &:hover {
+    &:hover {
+      .upload-form__button-icon {
         fill: @brightColor;
       }
-    }
-  }
-
-  &:focus {
-    outline: 1px dashed;
-    outline-offset: 5px;
-  }
-
-  &:hover {
-    .upload-form__button-icon {
-      fill: rgba(@baseColor, 0.5);
     }
   }
 }
@@ -301,10 +303,12 @@
   @media (min-width: @bpTablet) {
     grid-column-start: 2;
     margin: 0 14px 0 auto;
+    max-width: 260px;
   }
 
   @media (min-width: @bpDesktop) {
     margin-right: 0;
+    max-width: 183px;
   }
 
   &:hover {
@@ -318,20 +322,23 @@
   }
 
   &--submit {
-    margin-bottom: 12px;
+    margin: 0 auto 12px;
 
     @media (min-width: @bpTablet) {
       margin-bottom: 25px;
+      margin-left: 28px;
     }
 
     @media (min-width: @bpDesktop) {
       margin-bottom: 0;
+      margin-left: 50px;
     }
   }
 
   &--reset {
     color: rgba(@baseColor, 0.1);
     border-color: rgba(@baseColor, 0.1);
+    margin: 0 auto;
 
     &:hover {
       background-color: transparent;
@@ -345,8 +352,13 @@
       border-color: transparent;
     }
 
+    @media (min-width: @bpTablet) {
+      margin-left: 28px;
+    }
+
     @media (min-width: @bpDesktop) {
       grid-column-start: 3;
+      margin-left: 23px;
     }
   }
 

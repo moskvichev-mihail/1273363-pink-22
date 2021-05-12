@@ -1,20 +1,35 @@
 .upload-photo {
-  padding-top: 20px;
+  padding-top: 8px;
+
+  @media (min-width: @bpTablet) {
+    padding-top: 50px;
+  }
 
   @media (min-width: @bpDesktop) {
+    margin: 0 auto 41px;
     max-width: 940px;
     width: 100%;
-
-    .centered;
   }
 }
 
 .upload-photo__title {
-  padding: 0 20px 42px;
+  padding: 0 20px 32px;
   text-align: center;
   line-height: 30px;
   font-size: 14px;
   font-weight: 400;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 
-  .resetMargin;
+  @media (min-width: @bpTablet) {
+    font-size: 18px;
+    padding-bottom: 55px;
+    max-width: 470px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin-top: 3px;
+    margin-bottom: 25px;
+  }
 }

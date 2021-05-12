@@ -2,16 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  padding: 37px 20px 40px;
 
   @media (min-width: @bpTablet) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 26px 20px 27px;
+    padding: 27px 20px 26px;
   }
 
   @media (min-width: @bpDesktop) {
-    padding: 62px 20px 61px;
+    padding: 49px 0 52px;
     max-width: 940px;
 
     .centered;
@@ -21,11 +21,19 @@
 .footer__link {
   display: block;
   text-decoration: none;
+  margin-bottom: 21px;
+
+  @media (min-width: @bpTablet) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin-right: 6px;
+    margin-bottom: 8px;
+  }
 }
 
 .footer__link-logo {
-  margin-bottom: 27px;
-
   &:hover {
     fill: @brightColor;
   }
@@ -34,12 +42,18 @@
     opacity: 0.3;
   }
 
-  @media (min-width: @bpTablet) {
-    margin-bottom: 10px;
+  &--tablet {
+    @media (min-width: @bpDesktop) {
+      display: none;
+    }
   }
 
-  @media (min-width: @bpDesktop) {
-    margin-right: 7px;
+  &--desktop {
+    display: none;
+
+    @media (min-width: @bpDesktop) {
+      display: inline;
+    }
   }
 }
 
@@ -52,7 +66,11 @@
 }
 
 .footer__social-item {
-  margin: 10px 4px;
+  margin: 10px 5px;
+
+  @media (min-width: @bpMobile) {
+    margin: 10px 4px;
+  }
 }
 
 .footer__social-item-link {
@@ -80,25 +98,32 @@
       opacity: 0.3;
     }
   }
+
+  @media (min-width: @bpMobile) {
+    width: 53px;
+    height: 53px;
+  }
 }
 
 .footer__copyright {
   display: flex;
   align-items: center;
-  margin: 28px auto 0;
-  line-height: 16px;
+  margin: 25px auto 0;
+  line-height: 18px;
 
   @media (min-width: @bpTablet) {
     margin: 0 0 0 14px;
   }
 
   @media (min-width: @bpDesktop) {
-    margin: 0 0 6px;
+    margin: 0 0 4px;
+    flex-basis: 154px;
   }
 }
 
 .footer__copyright-link {
-  padding-left: 14px;
+  margin-left: 16px;
+  margin-top: 5px;
 
   &:focus {
     outline: 1px dashed @baseColor;
@@ -106,7 +131,11 @@
   }
 
   @media (min-width: @bpTablet) {
-    padding-top: 4px;
+    margin-top: 4px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin-left: 14px;
   }
 }
 
