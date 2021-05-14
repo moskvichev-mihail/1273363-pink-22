@@ -1,0 +1,54 @@
+.controls {
+  display: flex;
+  justify-content: center;
+
+  &--price {
+    .controls__btn {
+      border: 3px solid @bgPrimaryColor;
+
+      &--active {
+        border: 3px solid @baseColor;
+      }
+    }
+
+    @media (min-width: @bpTablet) {
+      display: none;
+    }
+  }
+
+  &--reviews {
+    @media (min-width: @bpDesktop) {
+      display: none;
+    }
+  }
+}
+
+.controls__btn {
+  width: 12px;
+  height: 12px;
+  margin: 0 6.5px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: rgba(@baseColor, 0.3);
+  border: 3px solid @lightColor;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(@baseColor, 0.6);
+  }
+
+  &:focus {
+    outline: 1px dashed @baseColor;
+    outline-offset: 3px;
+  }
+
+  &:active {
+    background-color: rgba(@baseColor, 0.1);
+  }
+
+  &--active {
+    background-color: @lightColor;
+    border: 3px solid @baseColor;
+    cursor: default;
+  }
+}

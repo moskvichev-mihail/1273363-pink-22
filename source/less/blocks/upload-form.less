@@ -1,0 +1,369 @@
+.upload-form {
+  padding: 20px 20px 42px;
+  background-color: @bgPrimaryColor;
+
+  @media (min-width: @bpTablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: 1fr auto auto;
+    grid-column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 57px 20px 53px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    grid-template-columns: 340px 232px 208px;
+    grid-template-rows: 1fr auto;
+    max-width: 940px;
+    padding: 46px 20px 56px;
+    margin-bottom: 41px;
+  }
+}
+
+.upload-form__picture {
+  @media (min-width: @bpTablet) {
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  @media (min-width: @bpDesktop) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-top: 11px;
+  }
+}
+
+.upload-form__photo {
+  display: block;
+  .resize(max-width, 280, 300);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.upload-form__buttons-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .resize(max-width, 240, 100%);
+  width: 100%;
+  margin: 32px auto 39px;
+  padding: 0 0 58px;
+  list-style: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+    width: 320px;
+    height: 1px;
+    background-color: rgba(@baseColor, 0.1);
+
+    @media (min-width: @bpTablet) {
+      content: none;
+    }
+  }
+
+  @media (min-width: @bpTablet) {
+    grid-column-start: 2;
+    align-self: start;
+    margin: 0 auto;
+    padding: 0 0 0 28px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    grid-column-end: 4;
+    padding-left: 44px;
+  }
+}
+
+.upload-form__buttons-item {
+  margin: 10px 17.5px;
+  box-sizing: border-box;
+
+  @media (min-width: @bpTablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column-start: 2;
+    width: 100%;
+    min-height: 22px;
+    margin: 0;
+    padding: 26px 0 24px;
+    border-bottom: 1px solid rgba(@baseColor, 0.1);
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 15px 0 13px;
+  }
+
+  &:first-child {
+    @media (min-width: @bpTablet) {
+      padding-top: 9px;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (min-width: @bpTablet) {
+      padding-bottom: 27px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      padding: 18px 0 15px;
+      border-bottom: none;
+    }
+  }
+}
+
+.upload-form__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: 1px dashed;
+    outline-offset: 5px;
+  }
+
+  &:hover {
+    .upload-form__button-icon {
+      fill: rgba(@baseColor, 0.5);
+    }
+  }
+
+  @media (min-width: @bpTablet) {
+    flex: 0 0 auto;
+    margin-right: 12px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin-right: 18px;
+  }
+
+  &--cut {
+    .resize(width, 44, 24, 50);
+    .resize(height, 44, 22, 44);
+  }
+
+  &--color {
+    .resize(width, 48, 24, 50);
+    .resize(height, 43, 22, 43);
+  }
+
+  &--contrast {
+    .resize(width, 32, 24, 50);
+    .resize(height, 32, 16, 32);
+  }
+
+  &--active {
+    pointer-events: none;
+
+    @media (min-width: @bpTablet) {
+      pointer-events: all;
+    }
+
+    .upload-form__button-icon {
+      fill: @brightColor;
+    }
+
+    &:hover {
+      .upload-form__button-icon {
+        fill: @brightColor;
+      }
+    }
+  }
+}
+
+.upload-form__button-icon {
+  width: 100%;
+  height: 100%;
+  fill: rgba(@baseColor, 0.3);
+}
+
+.upload-form__controls {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  .resize(width, 240, 202, 288);
+
+  @media (min-width: @bpTablet) {
+    position: relative;
+  }
+
+  &--cut {
+    .upload-form__controls-toggle {
+      transform: translateX(194px);
+
+      @media (min-width: @bpTablet) {
+        transform: translateX(159px);
+      }
+
+      @media (min-width: @bpDesktop) {
+        transform: translateX(232px);
+      }
+    }
+  }
+
+  &--color {
+    display: none;
+
+    @media (min-width: @bpTablet) {
+      display: block;
+    }
+
+    .upload-form__controls-toggle {
+      @media (min-width: @bpTablet) {
+        transform: translateX(24px);
+      }
+
+      @media (min-width: @bpDesktop) {
+        transform: translateX(34px);
+      }
+    }
+  }
+
+  &--contrast {
+    display: none;
+
+    @media (min-width: @bpTablet) {
+      display: block;
+    }
+
+    .upload-form__controls-toggle {
+      @media (min-width: @bpTablet) {
+        transform: translateX(95px);
+      }
+
+      @media (min-width: @bpDesktop) {
+        transform: translateX(136px);
+      }
+    }
+  }
+}
+
+.upload-form__controls-bar {
+  position: absolute;
+  bottom: 34px;
+  width: 100%;
+  height: 2px;
+  background: @baseColor;
+
+  @media (min-width: @bpTablet) {
+    position: static;
+    bottom: auto;
+  }
+}
+
+.upload-form__controls-toggle {
+  position: absolute;
+  bottom: 27px;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  background-color: @lightColor;
+  border: 2px solid @brightColor;
+  border-radius: 50%;
+  transform: translateX(192px);
+  cursor: pointer;
+
+  @media (min-width: @bpTablet) {
+    bottom: -6px;
+  }
+
+  &:focus {
+    outline: 1px dashed;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    background-color: @brightColor;
+  }
+}
+
+.upload-form__post-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 280px;
+  width: 100%;
+  padding: 15.5px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: @brightColor;
+  border: 3px solid @brightColor;
+  border-radius: 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  @media (min-width: @bpTablet) {
+    grid-column-start: 2;
+    margin: 0 14px 0 auto;
+    max-width: 260px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin-right: 0;
+    max-width: 183px;
+  }
+
+  &:hover {
+    background-color: @brightColor;
+    color: @lightColor;
+  }
+
+  &:active {
+    background-color: @brightColor;
+    color: rgba(@lightColor, 0.3);
+  }
+
+  &--submit {
+    margin: 0 auto 12px;
+
+    @media (min-width: @bpTablet) {
+      margin-bottom: 25px;
+      margin-left: 28px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      margin-bottom: 0;
+      margin-left: 50px;
+    }
+  }
+
+  &--reset {
+    color: rgba(@baseColor, 0.1);
+    border-color: rgba(@baseColor, 0.1);
+    margin: 0 auto;
+
+    &:hover {
+      background-color: transparent;
+      color: rgba(@baseColor, 0.3);
+      border-color: rgba(@baseColor, 0.3);
+    }
+
+    &:active {
+      background-color: rgba(@baseColor, 0.3);
+      color: rgba(@lightColor, 0.3);
+      border-color: transparent;
+    }
+
+    @media (min-width: @bpTablet) {
+      margin-left: 28px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      grid-column-start: 3;
+      margin-left: 23px;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

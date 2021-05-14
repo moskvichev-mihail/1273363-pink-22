@@ -1,0 +1,247 @@
+.header {
+  background-color: @baseColor;
+  color: @lightColor;
+
+  &--closed {
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(@darkColor, 0.3);
+
+    .header__logo {
+      padding: 22px 20px 21px;
+
+      @media (min-width: @bpTablet) {
+        padding: 27px 20px 43px;
+      }
+
+      @media (min-width: @bpDesktop) {
+        padding: 27px 0 43px;
+      }
+    }
+
+    .header__menu {
+      display: none;
+
+      @media (min-width: @bpDesktop) {
+        display: flex;
+      }
+    }
+
+    .header__toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (min-width: @bpDesktop) {
+        display: none;
+      }
+    }
+
+    .header__toggle-icon {
+      &--close {
+        display: none;
+      }
+    }
+  }
+
+  &--opened {
+    width: 100%;
+
+    .header__logo {
+      padding: 22px 20px 21px 20px;
+
+      @media (min-width: @bpTablet) {
+        padding: 27px 20px 43px;
+      }
+
+      @media (min-width: @bpDesktop) {
+        padding: 27px 0 43px;
+      }
+    }
+
+    .header__toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px 20px;
+
+      @media (min-width: @bpTablet) {
+        padding: 22px 40px;
+      }
+
+      @media (min-width: @bpDesktop) {
+        display: none;
+      }
+    }
+
+    .header__toggle-icon {
+      &--open {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: @bpDesktop) {
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0 90px 0 110px;
+    background-color: rgba(@darkColor, 0.3);
+    z-index: 10;
+  }
+}
+
+.header__logo {
+  display: inline-flex;
+  flex: 1 0 auto;
+  padding: 23px 20px;
+
+  &:hover {
+    .header__logo-img {
+      fill: @baseColor;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @bpTablet) {
+    padding: 27px 20px 43px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 27px 0 43px;
+  }
+}
+
+.header__logo-img {
+  display: block;
+
+  @media (min-width: @bpTablet) {
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    width: 147px;
+  }
+}
+
+.header__toggle {
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 21px 20px;
+
+  &:hover {
+    .header__toggle-icon {
+      fill: @brightColor;
+    }
+  }
+
+  &:focus {
+    outline: 1px dashed @lightColor;
+    outline-offset: -1px;
+  }
+
+  &:active {
+    .header__toggle-icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+.header__toggle-icon {
+  fill: @lightColor;
+}
+
+.header__nav {
+  display: flex;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid @darkColor;
+  list-style: none;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 32px;
+  font-weight: bold;
+  width: 100%;
+
+  @media (min-width: @bpDesktop) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    max-width: 68%;
+  }
+}
+
+.header__menu-item {
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid @darkColor;
+  border-top: 1px solid @menuBorderColor;
+
+  @media (min-width: @bpDesktop) {
+    border: none;
+    padding: 15px 15px 15px 12px;
+  }
+}
+
+.header__menu-link {
+  color: @lightColor;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+  text-align: center;
+
+  &:hover {
+    color: @brightColor;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    position: relative;
+
+    &::before {
+      @media (min-width: @bpDesktop) {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: @lightColor;
+      }
+    }
+
+    &:hover {
+      color: @lightColor;
+    }
+  }
+
+  @media (min-width: @bpDesktop) {
+    text-transform: none;
+  }
+}

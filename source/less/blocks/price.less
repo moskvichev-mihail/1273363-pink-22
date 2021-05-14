@@ -1,0 +1,233 @@
+.price {
+  position: relative;
+  padding: 100px 0 46px;
+  overflow: hidden;
+
+  @media (min-width: @bpTablet) {
+    padding-top: 100px;
+    padding-bottom: 21px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 158px 0 97px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-right: 100vw solid @bgPrimaryColor;
+    border-top: 17px solid transparent;
+    z-index: -1;
+
+    @media (min-width: @bpTablet) {
+      border-top-width: 45px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      border-top-width: 120px;
+    }
+  }
+}
+
+.price__table {
+  width: calc(300% - 120px);
+  margin: 0 auto 41px;
+  border-collapse: collapse;
+  line-height: 30px;
+  text-transform: uppercase;
+  transform: translateX(calc(-33.33333% + 20px));
+
+  @media (min-width: @bpTablet) {
+    margin: 0 auto 45px;
+    max-width: 620px;
+    width: 100%;
+    transform: none;
+    background-color: @bgPrimaryColor;
+  }
+
+  @media (min-width: @bpDesktop) {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.price__table-name {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.price__table-value {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+
+  @media (min-width: @bpTablet) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    font-size: 24px;
+  }
+}
+
+.price__table-row {
+  background-color: @lightColor;
+}
+
+.price__table-head {
+  background-color: @bgPrimaryColor;
+  border-right: 2px solid @bgPrimaryColor;
+
+  &:first-child {
+    display: none;
+    border-right: none;
+
+    @media (min-width: @bpTablet) {
+      display: table-cell;
+    }
+  }
+
+  &--price-package {
+    padding: 19px 20px 35px;
+    background: @baseColor;
+    color: @lightColor;
+    border-top-left-radius: 3px;
+    line-height: 1;
+    overflow: hidden;
+
+    @media (min-width: @bpTablet) {
+      padding: 21px 20px 14px;
+      width: 154px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      padding: 23px 20px 24px;
+    }
+  }
+
+  &--price-package--hit {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: -36px;
+      border-bottom: 24px solid @brightColor;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-top: 5px solid transparent;
+      transform: rotate(-45deg);
+      height: 0;
+      width: 130px;
+
+      @media (min-width: @bpTablet) {
+        border-bottom: 20px solid @brightColor;
+        width: 110px;
+      }
+
+      @media (min-width: @bpDesktop) {
+        width: 118px;
+        border-right: 25px solid transparent;
+        border-top: 13px solid transparent;
+      }
+    }
+
+    &::after {
+      content: "ХИТ";
+      position: absolute;
+      top: 11px;
+      left: 21px;
+      font-size: 14px;
+      font-weight: normal;
+      transform: translateX(-8px) translateY(10px) rotate(-45deg);
+
+      @media (min-width: @bpTablet) {
+        top: 5px;
+        left: 18px;
+      }
+
+      @media (min-width: @bpDesktop) {
+        top: 12px;
+        left: 23px;
+      }
+    }
+  }
+}
+
+.price__table-col {
+  position: relative;
+  padding: 13px 20px 15px;
+  border: 2px solid @borderColor;
+
+  &:first-child {
+    display: none;
+
+    @media (min-width: @bpTablet) {
+      display: table-cell;
+      text-transform: none;
+      width: 156px;
+      padding: 6px 15px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      width: 234px;
+      padding: 13px 20px 15px;
+    }
+  }
+
+  &--yes {
+    &::before {
+      content: "";
+      background: url("../../img/icons/yes.svg");
+      position: absolute;
+      width: 31px;
+      height: 21px;
+      top: 18px;
+      right: 19px;
+
+      @media (min-width: @bpTablet) {
+        display: block;
+        margin: 0 auto;
+        position: unset;
+      }
+    }
+  }
+
+  &--no {
+    &::before {
+      content: "";
+      background: url("../../img/icons/no.svg");
+      position: absolute;
+      width: 27px;
+      height: 27px;
+      top: 16px;
+      right: 21px;
+
+      @media (min-width: @bpTablet) {
+        display: block;
+        margin: 0 auto;
+        position: unset;
+      }
+    }
+  }
+
+  @media (min-width: @bpTablet) {
+    padding: 10px 20px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    width: 234px;
+    padding: 13px 20px 15px;
+  }
+}
+
+.price__table-col-name {
+  @media (min-width: @bpTablet) {
+    display: none;
+  }
+}

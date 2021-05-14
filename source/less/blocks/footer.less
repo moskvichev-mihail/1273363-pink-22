@@ -1,0 +1,152 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 37px 20px 40px;
+
+  @media (min-width: @bpTablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 27px 20px 26px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 49px 0 52px;
+    max-width: 940px;
+
+    .centered;
+  }
+}
+
+.footer__link {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 21px;
+
+  @media (min-width: @bpTablet) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin-right: 6px;
+    margin-bottom: 8px;
+  }
+}
+
+.footer__link-logo {
+  &:hover {
+    fill: @brightColor;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--tablet {
+    @media (min-width: @bpDesktop) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @bpDesktop) {
+      display: inline;
+    }
+  }
+}
+
+.footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__social-item {
+  margin: 10px 5px;
+
+  @media (min-width: @bpMobile) {
+    margin: 10px 4px;
+  }
+}
+
+.footer__social-item-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(@baseColor, 0.1);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+
+  &:hover {
+    border-color: @baseColor;
+  }
+
+  &:focus {
+    outline: 1px dashed @baseColor;
+    outline-offset: 1px;
+  }
+
+  &:active {
+    border-color: rgba(@baseColor, 0.1);
+
+    .footer__social-item-logo {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: @bpMobile) {
+    width: 53px;
+    height: 53px;
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  margin: 25px auto 0;
+  line-height: 18px;
+
+  @media (min-width: @bpTablet) {
+    margin: 0 0 0 14px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin: 0 0 4px;
+    flex-basis: 154px;
+  }
+}
+
+.footer__copyright-link {
+  margin-left: 16px;
+  margin-top: 5px;
+
+  &:focus {
+    outline: 1px dashed @baseColor;
+    outline-offset: 3px;
+  }
+
+  @media (min-width: @bpTablet) {
+    margin-top: 4px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin-left: 14px;
+  }
+}
+
+.footer__copyright-logo {
+  fill: @brightColor;
+
+  &:hover {
+    fill: @baseColor;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

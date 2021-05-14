@@ -1,0 +1,110 @@
+.research {
+  position: relative;
+  display: none;
+
+  .centered;
+
+  @media (min-width: @bpTablet) {
+    display: block;
+  }
+
+  @media (min-width: @bpDesktop) {
+    background-color: @bgPrimaryColor;
+  }
+}
+
+.research__container {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 54px;
+    bottom: 0;
+    left: calc(50% - 310px);
+    width: 238px;
+    height: 276px;
+    background: url("../../img/icons/timer.svg");
+    background-size: contain;
+
+    @media (min-width: @bpDesktop) {
+      top: 40px;
+      left: calc(50% - 470px);
+      width: 298px;
+      height: 345px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "24";
+    top: 122px;
+    bottom: 0;
+    left: calc(50% - 280px);
+    width: 177px;
+    height: 177px;
+    .resize(font-size, 96, 96, 120);
+    font-weight: 700;
+    line-height: 144px;
+    text-align: center;
+    background-color: @lightColor;
+    color: @brightColor;
+    border: 16px solid @brightColor;
+    border-radius: 50%;
+
+    @media (min-width: @bpDesktop) {
+      top: 126px;
+      left: calc(50% - 430px);
+      width: 220px;
+      height: 220px;
+      line-height: 180px;
+      background-color: @bgPrimaryColor;
+      border-width: 18px;
+    }
+  }
+
+  @media (min-width: @bpTablet) {
+    padding: 96px 0 70px 50%;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 135px 0 112px 370px;
+    max-width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.research__title {
+  font-size: 30px;
+  .resize(line-height, 36, 36, 30);
+
+  .resetMargin;
+
+  @media (min-width: @bpTablet) {
+    max-width: 200px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    max-width: 100%;
+  }
+}
+
+
+.research__text {
+  padding: 10px 0;
+
+  .resetMargin;
+
+  @media (min-width: @bpTablet) {
+    max-width: 300px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    max-width: 535px;
+    padding: 25px 0 30px;
+  }
+}
+
+.research__link {
+  color: @brightColor;
+}

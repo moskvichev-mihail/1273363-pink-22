@@ -1,0 +1,50 @@
+.map {
+  position: relative;
+  height: 200px;
+  background: url("../../img/map-mobile@1x.jpg") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 33px solid @lightColor;
+    z-index: 1;
+
+    @media (min-width: @bpTablet) {
+      border-top-width: 68px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      border-top-width: 103px;
+    }
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../../img/map-mobile@2x.jpg");
+  }
+
+  @media (min-width: @bpTablet) {
+    height: 374px;
+    background: url("../../img/map-tablet@1x.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: @bpTablet) and (min-resolution: 1.5dppx) {
+    background-image: url("../../img/map-tablet@2x.jpg");
+  }
+
+  @media (min-width: @bpDesktop) {
+    height: 502px;
+    background: url("../../img/map-desktop@1x.jpg") no-repeat;
+    background-size: cover;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: @bpDesktop) and (min-resolution: 1.5dppx) {
+    background-image: url("../../img/map-desktop@2x.jpg");
+  }
+}

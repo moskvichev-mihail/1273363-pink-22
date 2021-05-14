@@ -1,0 +1,145 @@
+.contacts {
+  padding: 42px 20px 15px;
+  text-align: center;
+
+  .centered;
+
+  @media (min-width: @bpTablet) {
+    padding-top: 44px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding-top: 60px;
+  }
+}
+
+.contacts__info {
+  .resize(max-width, 100%, 620, 960);
+
+  @media (min-width: @bpTablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+.contacts__title {
+  margin: 0 0 34px;
+  .resize(font-size, 24, 40, 50);
+  .resize(line-height, 28.8, 54.47, 68.09);
+  font-weight: 300;
+
+  @media (min-width: @bpTablet) {
+    flex-basis: 100%;
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.contacts__title-line {
+  display: block;
+}
+
+.contacts__info-item {
+  margin-bottom: 20px;
+
+  @media (min-width: @bpTablet) {
+    flex: 0 1 50%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @bpDesktop) {
+    flex-basis: 320px;
+  }
+
+  &:last-child {
+    @media (min-width: @bpTablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--phone {
+    @media (min-width: @bpDesktop) {
+      padding-left: 10px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      padding: 0 20px;
+    }
+  }
+
+  &--email {
+    @media (min-width: @bpTablet) {
+      margin-bottom: 43px;
+      padding-left: 30px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      padding: 0 20px;
+      order: 2;
+    }
+  }
+
+  &--address {
+    @media (min-width: @bpDesktop) {
+      padding: 0 20px;
+      order: 1;
+    }
+  }
+}
+
+.contacts__info-title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+
+  @media (min-width: @bpTablet) {
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin-bottom: 22px;
+  }
+}
+
+.contacts__info-link {
+  color: @brightColor;
+  font-size: 24px;
+  line-height: 32.68px;
+  font-weight: 300;
+  text-decoration: none;
+
+  &:hover {
+    color: @baseColor;
+    text-decoration: 1px @baseColor underline;
+  }
+
+  &:focus {
+    outline: 1px dashed @baseColor;
+    outline-offset: 1px;
+  }
+
+  &:active {
+    opacity: 0.3;
+    text-decoration: none;
+  }
+}
+
+.contacts__info-text {
+  color: @brightColor;
+  font-size: 24px;
+  line-height: 32.68px;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.contacts__info-text-line {
+  display: block;
+}
