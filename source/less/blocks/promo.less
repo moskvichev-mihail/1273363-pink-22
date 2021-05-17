@@ -157,6 +157,7 @@
 
   &:active {
     color: rgba(@brightColor, 0.3);
+    background-color: @lightColor;
   }
 
   @media (min-width: @bpTablet) {
@@ -229,4 +230,8 @@
 
 .header--closed + .main .promo {
   .resize(padding-top, 66, 110);
+}
+
+.header--opened + .main .promo {
+  padding-top: 0;
 }

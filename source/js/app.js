@@ -1,16 +1,16 @@
-var navMain = document.querySelector('.header');
-var navToggle = document.querySelector('.header__toggle');
+var navMain = document.querySelector(".header");
+var navToggle = document.querySelector(".header__toggle");
 
-navMain.classList.remove('header--no-js');
-navMain.classList.add('header--closed');
+navMain.classList.remove("header--no-js");
+navMain.classList.add("header--closed");
 
-navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('header--closed')) {
-    navMain.classList.remove('header--closed');
-    navMain.classList.add('header--opened');
+navToggle.addEventListener("click", function() {
+  if (navMain.classList.contains("header--closed")) {
+    navMain.classList.remove("header--closed");
+    navMain.classList.add("header--opened");
   } else {
-    navMain.classList.add('header--closed');
-    navMain.classList.remove('header--opened');
+    navMain.classList.add("header--closed");
+    navMain.classList.remove("header--opened");
   }
 });
 
@@ -19,7 +19,7 @@ navToggle.addEventListener('click', function() {
 
   let initMap = function (coordinate) {
     ymaps.ready(function () {
-      let map = new ymaps.Map('map', {
+      let map = new ymaps.Map("map", {
         center: coordinate,
         zoom: 16,
         controls: []
@@ -37,7 +37,7 @@ navToggle.addEventListener('click', function() {
         }
       });
 
-      map.behaviors.disable('scrollZoom');
+      map.behaviors.disable("scrollZoom");
       map.controls.add(zoomControl);
     });
   };
