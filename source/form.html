@@ -7,7 +7,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" type="image/png">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="body body--centered">
     <header class="header header--no-js">
@@ -143,7 +146,7 @@
         </form>
       </section>
     </main>
-    <footer class="footer footer--centered">
+    <footer class="footer footer--centered" aria-label="Подвал">
       <a href="index.html" class="footer__link">
         <svg class="footer__link-logo footer__link-logo--tablet" width="145" height="40">
           <use xlink:href="img/sprite.svg#footer-logo-tablet"></use>

@@ -7,7 +7,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" type="image/png">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="body body--centered">
     <header class="header header--no-js">
@@ -209,45 +212,45 @@
           <ul class="upload-form__buttons-list">
             <li class="upload-form__buttons-item">
               <button type="button"
-                      class="upload-form__button upload-form__button--cut upload-form__button--active">
+                      class="upload-form__button upload-form__button--cut upload-form__button--active" aria-label="Инструмент «Обрезка»">
                 <svg class="upload-form__button-icon" width="44" height="44">
                   <use xlink:href="img/sprite.svg#crop"></use>
                 </svg>
               </button>
               <div class="upload-form__controls upload-form__controls--cut">
                 <div class="upload-form__controls-bar"></div>
-                <button type="button" class="upload-form__controls-toggle"></button>
+                <button type="button" class="upload-form__controls-toggle" aria-label="Текущее значение"></button>
               </div>
             </li>
             <li class="upload-form__buttons-item">
-              <button type="button" class="upload-form__button upload-form__button--color">
+              <button type="button" class="upload-form__button upload-form__button--color" aria-label="Инструмент «Заливка»">
                 <svg class="upload-form__button-icon" width="48" height="43">
                   <use xlink:href="img/sprite.svg#fill"></use>
                 </svg>
               </button>
               <div class="upload-form__controls upload-form__controls--color">
                 <div class="upload-form__controls-bar"></div>
-                <button type="button" class="upload-form__controls-toggle"></button>
+                <button type="button" class="upload-form__controls-toggle" aria-label="Текущее значение"></button>
               </div>
             </li>
             <li class="upload-form__buttons-item">
-              <button type="button" class="upload-form__button upload-form__button--contrast">
+              <button type="button" class="upload-form__button upload-form__button--contrast" aria-label="Инструмент «Яркость/Контрастность»">
                 <svg class="upload-form__button-icon" width="32" height="32">
                   <use xlink:href="img/sprite.svg#contrast"></use>
                 </svg>
               </button>
               <div class="upload-form__controls upload-form__controls--contrast">
                 <div class="upload-form__controls-bar"></div>
-                <button type="button" class="upload-form__controls-toggle"></button>
+                <button type="button" class="upload-form__controls-toggle" aria-label="Текущее значение"></button>
               </div>
             </li>
           </ul>
-          <button class="upload-form__post-button upload-form__post-button--submit" type="submit">Запостить</button>
-          <button class="upload-form__post-button upload-form__post-button--reset" type="reset">Отмена</button>
+          <button class="upload-form__post-button upload-form__post-button--submit" type="submit" aria-label="Запостить">Запостить</button>
+          <button class="upload-form__post-button upload-form__post-button--reset" type="reset" aria-label="Отмена">Отмена</button>
         </form>
       </section>
     </main>
-    <footer class="footer footer--centered">
+    <footer class="footer footer--centered" aria-label="Подвал">
       <a href="index.html" class="footer__link">
         <svg class="footer__link-logo footer__link-logo--tablet" width="145" height="40">
           <use xlink:href="img/sprite.svg#footer-logo-tablet"></use>

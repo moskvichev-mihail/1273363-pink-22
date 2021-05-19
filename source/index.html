@@ -7,7 +7,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" type="image/png">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="body body--centered">
     <header class="header header--no-js">
@@ -53,21 +56,21 @@
             приложение</a>
           <ul class="promo__apps-list">
             <li class="promo__apps-item">
-              <a href="https://www.apple.com/ru/app-store/" target="_blank" class="promo__apps-link">
+              <a href="https://www.apple.com/ru/app-store/" target="_blank" class="promo__apps-link" aria-label="App Store">
                 <svg width="47" height="56">
                   <use xlink:href="img/sprite.svg#apple-logo"></use>
                 </svg>
               </a>
             </li>
             <li class="promo__apps-item">
-              <a href="https://play.google.com/store/apps" target="_blank" class="promo__apps-link">
+              <a href="https://play.google.com/store/apps" target="_blank" class="promo__apps-link" aria-label="Google Play">
                 <svg width="43" height="47">
                   <use xlink:href="img/sprite.svg#android-logo"></use>
                 </svg>
               </a>
             </li>
             <li class="promo__apps-item">
-              <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" target="_blank" class="promo__apps-link">
+              <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" target="_blank" class="promo__apps-link" aria-label="Microsoft Store">
                 <svg width="44" height="41">
                   <use xlink:href="img/sprite.svg#microsoft-logo"></use>
                 </svg>
@@ -225,7 +228,7 @@
       </section>
       <section id="map" class="map"></section>
     </main>
-    <footer class="footer footer--centered">
+    <footer class="footer footer--centered" aria-label="Подвал">
       <a class="footer__link" href="#">
         <svg class="footer__link-logo footer__link-logo--tablet" width="145" height="40">
           <use xlink:href="img/sprite.svg#footer-logo-tablet"></use>
